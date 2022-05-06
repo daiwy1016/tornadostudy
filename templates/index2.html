@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+
+
+
+{% block header %}
+
+    <h1>{{ header_text }}</h1>
+   {% module Hello() %}
+
+{% end %}
+
+
+
+{% block body %}
+
+    <p>Hello from the child template!</p>
+{% raw linkify("https://fb.me/burtsbooks", extra_params='ref=website') %}.
+{% end %}
+
+
+
+{% block footer %}
+
+    <p>{{ footer_text }}</p>
+
+{% end %}
